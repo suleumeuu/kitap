@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ • Машинаға бағытталған бағдарламалау тілі</title>
+  <meta name="description" content="С++ машинаға бағытталған бағдарламалау тілі — Найзағараева А.А. дәрістер мен зертханалық жұмыстардың интерактивті оқу порталы.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="Басты бет">
+    <span class="brand-mark">&lt;/&gt;</span>
+    <span><b>C++</b><small>оқу порталы</small></span>
+  </a>
+  <nav>
+    <a href="#about">Кітап туралы</a>
+    <a href="#contents">Мазмұны</a>
+    <a href="#labs">Зертханалар</a>
+    <a href="#practice">Практика</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" title="Түсті өзгерту">◐</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-copy">
+    <div class="eyebrow"><span></span> ИНТЕРАКТИВТІ ОҚУ ПОРТАЛЫ</div>
+    <h1>С++ <em>машинаға бағытталған</em><br>бағдарламалау тілі</h1>
+    <p class="lead">Теорияны оқы. Кодты түсін. Тапсырманы орында. Нәтижеңді бір жерде бақыла.</p>
+    <div class="author">Найзағараева А.А.</div>
+    <div class="hero-actions">
+      <a class="btn primary" href="#contents">Оқуды бастау <span>→</span></a>
+      <a class="btn ghost" href="#practice">Практикаға өту</a>
+    </div>
+    <div class="stats">
+      <div><b>15</b><span>дәріс</span></div>
+      <div><b>12</b><span>зертханалық жұмыс</span></div>
+      <div><b>∞</b><span>практика</span></div>
+    </div>
+  </div>
+  <div class="hero-terminal">
+    <div class="terminal-head"><i></i><i></i><i></i><span>main.cpp</span></div>
+    <pre><code><span class="c1">#include</span> <span class="c2">&lt;iostream&gt;</span>
+
+<span class="kw">int</span> main() {
+    <span class="c3">std::cout</span> &lt;&lt; <span class="str">"С++ әлеміне қош келдіңіз!"</span>;
+    <span class="kw">return</span> <span class="num">0</span>;
+}</code></pre>
+    <div class="terminal-output">▶ Бағдарлама сәтті орындалды</div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="section-tag">01 / КІТАП</div>
+  <div class="two-col">
+    <div>
+      <h2>Кітап туралы</h2>
+      <p class="big">Бұл портал С++ пәнінің дәрістер жинағы мен зертханалық жұмыстарын бір заманауи интерфейске біріктіреді.</p>
+    </div>
+    <div class="glass info-card">
+      <div class="quote">“</div>
+      <p>Материалдар объектіге бағытталған программалау, сілтемелер, кластар, мұрагерлік, полиморфизм, файлдар, ерекше жағдайлар және стандартты кітапхана тақырыптарын қамтиды.</p>
+      <div class="source">Негізгі авторы: <b>Найзағараева А.А.</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="contents" class="section">
+  <div class="section-tag">02 / МАЗМҰНЫ</div>
+  <div class="section-head">
+    <div><h2>Дәрістер</h2><p>Тақырыпты басыңыз — сол бөлімге бірден өтесіз.</p></div>
+    <div class="search"><span>⌕</span><input id="searchInput" placeholder="Тақырыпты іздеу..."></div>
+  </div>
+  <div id="lectureGrid" class="lecture-grid"></div>
+</section>
+
+<section id="reader" class="section reader-section">
+  <div class="section-tag">03 / ОҚУ</div>
+  <div id="readerContent"></div>
+</section>
+
+<section id="labs" class="section dark-section">
+  <div class="section-tag">04 / LAB</div>
+  <div class="section-head">
+    <div><h2>Зертханалық жұмыстар</h2><p>Практикалық есептерді тақырып бойынша ашыңыз.</p></div>
+  </div>
+  <div id="labGrid" class="lab-grid"></div>
+</section>
+
+<section id="practice" class="section practice">
+  <div class="section-tag">05 / PRACTICE</div>
+  <div class="two-col practice-grid">
+    <div>
+      <h2>Кодты өзің тексер</h2>
+      <p class="big">Кітаптағы негізгі идеяларды шағын интерактивті жаттығумен бекіт.</p>
+      <div class="challenge">
+        <span class="pill">01</span>
+        <b>Экранға хабарлама шығар</b>
+        <p><code>std::cout</code> көмегімен “Hello, C++!” мәтінін шығар.</p>
+      </div>
+      <div class="challenge">
+        <span class="pill">02</span>
+        <b>Айнымалылармен жұмыс</b>
+        <p>Екі санның қосындысын есептейтін шағын бағдарлама құрастыр.</p>
+      </div>
+    </div>
+    <div class="code-lab">
+      <div class="editor-top"><span>practice.cpp</span><button id="resetCode">↺ Қалпына келтіру</button></div>
+      <textarea id="codeEditor">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, C++!";
+    return 0;
+}</textarea>
+      <div class="editor-bottom">
+        <button class="run-btn" id="runCode">▶ Тексеру</button>
+        <span id="runResult">Дайын</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="cta-inner">
+    <div class="section-tag">06 / ҚОРЫТЫНДЫ</div>
+    <h2>Кодты жаттау емес,<br><span>ойлау тәсілін меңгер.</span></h2>
+    <p>Дәріс → түсіну → практика → нәтиже.</p>
+    <a class="btn primary" href="#contents">Мазмұнға оралу ↑</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><b>C++ оқу порталы</b><span>Найзағараева А.А. материалы негізінде</span></div>
+  <div>© 2026 • Интерактивті оқу жобасы</div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
